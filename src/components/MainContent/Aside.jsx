@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { CategoryApiContext } from "../../context/CategoryApi"
 import styles from '../../styles/aside.module.scss'
 
@@ -12,12 +13,12 @@ const Aside = () => {
       <nav>
         <ul>
           <li>
-            <a href="#">Página inicial</a>
+            <Link to="/home">Página inicial</Link>
           </li>
           {categoriesList &&
             categoriesList.map(category => (
               <li key={category.id}>
-                <a href="#">  {category.name}</a>
+                <Link to={`/${category.path}`}>{category.name}</Link>
               </li>
             ))
           }
