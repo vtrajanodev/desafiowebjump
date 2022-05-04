@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Navbar } from '../components/Navbar'
@@ -20,6 +19,9 @@ export const LinkRoutes = () => {
           <Routes>
             <Route path='/home' element={<Home />} />
             <Route path='/camisetas' element={<Camisetas />} />
+            <Route path='*' element={
+              <Navigate to="/home"/>
+            } />
           </Routes>
           <Footer />
         </CategoryApiContextProvider>
