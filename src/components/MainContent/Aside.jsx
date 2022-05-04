@@ -1,10 +1,11 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useMatch, resolvePath } from "react-router-dom"
 import { CategoryApiContext } from "../../context/CategoryApi"
 import styles from '../../styles/aside.module.scss'
 
 
 const Aside = () => {
+
 
   const { categoriesList } = useContext(CategoryApiContext)
 
@@ -23,7 +24,7 @@ const Aside = () => {
             ))
           }
           <li>
-            <a href="#">Contato</a>
+            <a href="/contato">Contato</a>
           </li>
         </ul>
       </nav>

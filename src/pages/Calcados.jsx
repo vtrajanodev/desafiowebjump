@@ -1,26 +1,28 @@
 import { useContext, useEffect } from "react"
 import Aside from "../components/MainContent/Aside"
 import { CategoryApiContext } from "../context/CategoryApi"
-import styles from '../styles/camisetas.module.scss'
-import tshirtImg from '../assets/shirt-1.jpg'
+import calcadosImg from '../assets/shoes-3.jpg'
+import styles from '../styles/calcados.module.scss'
 
-export const Camisetas = () => {
+
+export const Calcados = () => {
 
   const { items, getItems } = useContext(CategoryApiContext)
 
   useEffect(() => {
-    getItems(1)
+    getItems(2)
   }, [])
+
 
   return (
     <div className="flex container">
       <Aside />
 
-      <section className={styles.camisetas}>
+      <section className={styles.calcados}>
         {
           items.map(camiseta => (
             <div key={camiseta.id}>
-              <img src={tshirtImg} alt="Imagem da camiseta" />
+              <img src={calcadosImg} alt="Imagem da camiseta" />
               <span>{camiseta.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
@@ -35,7 +37,7 @@ export const Camisetas = () => {
         {
           items.map(camiseta => (
             <div key={camiseta.id}>
-              <img src={tshirtImg} alt="Imagem da camiseta" />
+              <img src={calcadosImg} alt="Imagem da camiseta" />
               <span>{camiseta.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
@@ -52,7 +54,7 @@ export const Camisetas = () => {
         {
           items.map(camiseta => (
             <div key={camiseta.id}>
-              <img src={tshirtImg} alt="Imagem da camiseta" />
+              <img src={calcadosImg} alt="Imagem da camiseta" />
               <span>{camiseta.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
