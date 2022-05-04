@@ -1,0 +1,25 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  input {
+    width: 414px;
+    height: 44px;
+
+    padding-left: 1rem;
+  }
+
+  button {
+    width: 100px;
+    height: 44px;
+
+    background-color: #CB0D1F;
+    color: #fff;
+    font-weight: 800;
+
+    border: none;
+    cursor: pointer;
+  }
+}

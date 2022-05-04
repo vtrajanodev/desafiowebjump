@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  nav ul li {
+    display: inline;
+
+    &:last-child{
+      margin-right: 99px;
+    }
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+}

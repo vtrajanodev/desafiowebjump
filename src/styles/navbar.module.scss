@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #CB0D1F;
+  height: 54px;
+
+
+  display: flex;
+  align-items: center;
+
+
+  ul li {
+    list-style-type: none;
+    font-weight: 800;
+    color: #fff;
+    display: inline;
+    margin-right: 75px;
+
+  }
+
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
