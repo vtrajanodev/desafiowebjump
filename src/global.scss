@@ -9,7 +9,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-  padding: 0 101px;
+.containerMenu {
+  max-width: 1240px;
+  margin-left: 70px;
 }
 
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}

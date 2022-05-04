@@ -1,17 +1,15 @@
-import { useContext } from 'react'
-import { CategoryApiContext } from '../context/CategoryApi'
-import styles from '../styles/navbar.module.scss'
+import { useContext } from "react"
+import { CategoryApiContext } from "../../context/CategoryApi"
+import styles from '../../styles/aside.module.scss'
 
 
-export const Navbar = () => {
+const Aside = () => {
 
   const { categoriesList } = useContext(CategoryApiContext)
 
-  console.log(categoriesList)
-
   return (
-    <div className={`${styles.navbar}`}>
-      <nav className='containerMenu'>
+    <aside className={`${styles.aside} container`}>
+      <nav>
         <ul>
           <li>
             <a href="#">Página inicial</a>
@@ -19,7 +17,7 @@ export const Navbar = () => {
           {categoriesList &&
             categoriesList.map(category => (
               <li key={category.id}>
-                <a href="#">{category.name}</a>
+                <a href="#">  {category.name}</a>
               </li>
             ))
           }
@@ -28,6 +26,8 @@ export const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
   )
 }
+
+export default Aside

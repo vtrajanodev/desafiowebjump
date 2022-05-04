@@ -1,0 +1,29 @@
+.aside {
+  height: 507px;
+  width: 261.22px;
+
+  background-color: #E2DEDC;
+
+  padding: 16px 48px;
+
+  ul li {
+    margin-bottom: 16px;
+    font-weight: 600;
+    opacity: 1;
+    font-size: 18px;
+
+    &:first-child {
+      margin-top: 16px;
+    }
+  }
+
+  ul li a {
+    color: #000;
+    text-decoration: none;
+
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
