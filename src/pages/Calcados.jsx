@@ -10,7 +10,7 @@ export const Calcados = () => {
   const { items, getItems } = useContext(CategoryApiContext)
 
   useEffect(() => {
-    getItems(2)
+    getItems(3)
   }, [])
 
 
@@ -20,30 +20,30 @@ export const Calcados = () => {
 
       <section className={styles.calcados}>
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={calcadosImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calcados => (
+            <div key={calcados.id}>
+              <img src={calcadosImg} alt="Imagem da calcados" />
+              <span>{calcados.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calcados.price)}
               </span>
               <button>COMPRAR</button>
             </div>
           ))
         }
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={calcadosImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calcados => (
+            <div key={calcados.id}>
+              <img src={calcadosImg} alt="Imagem da calcados" />
+              <span>{calcados.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calcados.price)}
               </span>
               <button>COMPRAR</button>
 
@@ -52,15 +52,15 @@ export const Calcados = () => {
         }
 
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={calcadosImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calcados => (
+            <div key={calcados.id}>
+              <img src={calcadosImg} alt="Imagem da calcados" />
+              <span>{calcados.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calcados.price)}
               </span>
               <button>COMPRAR</button>
             </div>

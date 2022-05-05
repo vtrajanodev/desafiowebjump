@@ -1,17 +1,20 @@
-import { useContext } from "react"
-import { Link, useMatch, resolvePath } from "react-router-dom"
+import { useContext, useMemo, useState } from "react"
+import { Link } from "react-router-dom"
 import { CategoryApiContext } from "../../context/CategoryApi"
 import styles from '../../styles/aside.module.scss'
 
 
 const Aside = () => {
 
+  const { categoriesList, pathname } = useContext(CategoryApiContext)
 
-  const { categoriesList } = useContext(CategoryApiContext)
+  const isCamisetas = useMemo(() => pathname === "/camisetas", [pathname]) 
 
   return (
+    
     <aside className={`${styles.aside} container`}>
       <nav>
+      {isCamisetas && (<div>to na rota camisetas</div>)}
         <ul>
           <li>
             <Link to="/home">Página inicial</Link>
@@ -24,7 +27,7 @@ const Aside = () => {
             ))
           }
           <li>
-            <a href="/contato">Contato</a>
+            <Link to="/contato">Contato</Link>
           </li>
         </ul>
       </nav>

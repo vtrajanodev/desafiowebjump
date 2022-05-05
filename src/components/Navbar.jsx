@@ -6,8 +6,6 @@ import styles from '../styles/navbar.module.scss'
 
 export const Navbar = () => {
 
- 
-
   const { categoriesList } = useContext(CategoryApiContext)
 
   console.log(categoriesList)

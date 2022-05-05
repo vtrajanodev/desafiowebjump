@@ -12,37 +12,36 @@ export const Calcas = () => {
     getItems(2)
   }, [])
 
-
   return (
     <div className="flex container">
       <Aside />
 
       <section className={styles.calcas}>
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={pantsImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calca => (
+            <div key={calca.id}>
+              <img src={pantsImg} alt="Imagem da calca" />
+              <span>{calca.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calca.price)}
               </span>
               <button>COMPRAR</button>
             </div>
           ))
         }
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={pantsImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calca => (
+            <div key={calca.id}>
+              <img src={pantsImg} alt="Imagem da calca" />
+              <span>{calca.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calca.price)}
               </span>
               <button>COMPRAR</button>
 
@@ -51,15 +50,15 @@ export const Calcas = () => {
         }
 
         {
-          items.map(camiseta => (
-            <div key={camiseta.id}>
-              <img src={pantsImg} alt="Imagem da camiseta" />
-              <span>{camiseta.name}</span>
+          items.map(calca => (
+            <div key={calca.id}>
+              <img src={pantsImg} alt="Imagem da calca" />
+              <span>{calca.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(camiseta.price)}
+                }).format(calca.price)}
               </span>
               <button>COMPRAR</button>
             </div>

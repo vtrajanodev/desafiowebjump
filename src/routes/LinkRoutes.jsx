@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -11,6 +12,7 @@ import { Contato } from '../pages/Contato'
 import { Home } from '../pages/Home'
 
 export const LinkRoutes = () => {
+
 
   return (
     <>
@@ -26,7 +28,7 @@ export const LinkRoutes = () => {
             <Route path='/calcados' element={<Calcados />} />
             <Route path='/contato' element={<Contato />} />
             <Route path='*' element={
-              <Navigate to="/home"/>
+              <Navigate to="/home" />
             } />
           </Routes>
           <Footer />
