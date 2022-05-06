@@ -1,6 +1,5 @@
 import { useContext, useEffect } from 'react'
 import { CategoryApiContext } from '../context/CategoryApi'
-import pantsImg from '../assets/pants-4.jpg'
 import styles from '../styles/calcas.module.scss'
 import { CalcaFilter } from '../components/Filters/CalcaFilter'
 
@@ -20,7 +19,7 @@ export const Calcas = () => {
         {
           items.map(calca => (
             <div key={calca.id}>
-              <img src={pantsImg} alt="Imagem da calca" />
+              <img src={`/src/assets/${calca.image}`} alt="Imagem da calca" />
               <span>{calca.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
@@ -32,39 +31,7 @@ export const Calcas = () => {
             </div>
           ))
         }
-        {
-          items.map(calca => (
-            <div key={calca.id}>
-              <img src={pantsImg} alt="Imagem da calca" />
-              <span>{calca.name}</span>
-              <span className={styles.currency}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL'
-                }).format(calca.price)}
-              </span>
-              <button>COMPRAR</button>
-
-            </div>
-          ))
-        }
-
-        {
-          items.map(calca => (
-            <div key={calca.id}>
-              <img src={pantsImg} alt="Imagem da calca" />
-              <span>{calca.name}</span>
-              <span className={styles.currency}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL'
-                }).format(calca.price)}
-              </span>
-              <button>COMPRAR</button>
-            </div>
-          ))
-        }
-
+   
       </section>
     </div>
   )

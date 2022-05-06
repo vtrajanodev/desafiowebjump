@@ -23,7 +23,7 @@ export const Calcados = () => {
         {
           items.map(calcados => (
             <div key={calcados.id}>
-              <img src={calcadosImg} alt="Imagem da calcados" />
+              <img src={`/src/assets/${calcados.image}`} alt="Imagem da calcados" />
               <span>{calcados.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
@@ -35,39 +35,6 @@ export const Calcados = () => {
             </div>
           ))
         }
-        {
-          items.map(calcados => (
-            <div key={calcados.id}>
-              <img src={calcadosImg} alt="Imagem da calcados" />
-              <span>{calcados.name}</span>
-              <span className={styles.currency}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL'
-                }).format(calcados.price)}
-              </span>
-              <button>COMPRAR</button>
-
-            </div>
-          ))
-        }
-
-        {
-          items.map(calcados => (
-            <div key={calcados.id}>
-              <img src={calcadosImg} alt="Imagem da calcados" />
-              <span>{calcados.name}</span>
-              <span className={styles.currency}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL'
-                }).format(calcados.price)}
-              </span>
-              <button>COMPRAR</button>
-            </div>
-          ))
-        }
-
       </section>
     </div>
   )
