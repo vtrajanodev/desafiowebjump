@@ -1,8 +1,12 @@
+import { useContext } from 'react'
+import { CategoryApiContext } from '../../context/CategoryApi'
 import styles from '../../styles/aside.module.scss'
 
 
 
 export const CamisetaFilter = () => {
+
+  const { getItemsFilters } = useContext(CategoryApiContext)
 
   return (
     <>
@@ -12,10 +16,10 @@ export const CamisetaFilter = () => {
         <h3>Cores</h3>
 
         <div className={styles.colors}>
-          <button className={styles.red}></button>
-          <button className={styles.orange}></button>
-          <button className={styles.blue}></button>
-          <button className={styles.pink}></button>
+          <button onClick={() => getItemsFilters("Preta")} className={styles.black}></button>
+          <button onClick={() => getItemsFilters("Laranja")} className={styles.orange}></button>
+          <button onClick={() => getItemsFilters("Amarela")} className={styles.yellow}></button>
+          <button onClick={() => getItemsFilters("Rosa")} className={styles.pink}></button>
         </div>
 
         <div>

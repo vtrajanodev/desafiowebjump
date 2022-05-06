@@ -1,30 +1,46 @@
 import { createContext, useEffect, useState } from 'react'
+import { Loading } from '../components/Loading'
 import { api } from '../services/api'
 
-export const CategoryApiContext = createContext()
+export const CategoryApiContext = createContext('')
 
 export const CategoryApiContextProvider = ({ children }) => {
 
   const [categoriesList, setCategoriesList] = useState([])
   const [items, setItems] = useState([])
+  const [camisasFiltradas, setCamisasFiltradas] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  const pathname = window.location.pathname
 
   useEffect(() => {
     (async () => {
       const { data } = await api.get('/api/V1/categories/list')
       setCategoriesList(data.items)
+      setLoading(false)
     })();
   }, []);
 
 
-  const getItems = async(id) => {
+  const getItems = async (id) => {
     const { data } = await api.get(`/api/V1/categories/${id}`)
-      setItems(data.items)
+    setItems(data.items)
+    setLoading(false)
   }
 
+  const getItemsFilters = (filter) => {
+
+    const itemsFiltered = items.filter((item) => item.filter[0].color === filter)
+    setCamisasFiltradas(itemsFiltered)
+    console.log(camisasFiltradas)
+    setLoading(false)
+  }
+
+  if(loading) {
+    return <Loading />
+  }
+ 
   return (
-    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, pathname }}>
+    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, camisasFiltradas }}>
       {children}
     </CategoryApiContext.Provider>
   );

@@ -1,7 +1,12 @@
+import { useContext, useState } from 'react'
+import { CategoryApiContext } from '../../context/CategoryApi';
 import styles from '../../styles/aside.module.scss'
 
 
 export const CalcaFilter = () => {
+
+  
+
   return (
     <>
       <>
