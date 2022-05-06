@@ -3,6 +3,7 @@ import Aside from "../components/MainContent/Aside"
 import { CategoryApiContext } from "../context/CategoryApi"
 import calcadosImg from '../assets/shoes-3.jpg'
 import styles from '../styles/calcados.module.scss'
+import { CalcadosFilter } from "../components/Filters/CalcadosFilter"
 
 
 export const Calcados = () => {
@@ -16,7 +17,7 @@ export const Calcados = () => {
 
   return (
     <div className="flex container">
-      <Aside />
+      <CalcadosFilter />
 
       <section className={styles.calcados}>
         {

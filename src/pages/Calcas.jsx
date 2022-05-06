@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react'
-import Aside from '../components/MainContent/Aside'
 import { CategoryApiContext } from '../context/CategoryApi'
 import pantsImg from '../assets/pants-4.jpg'
 import styles from '../styles/calcas.module.scss'
+import { CalcaFilter } from '../components/Filters/CalcaFilter'
 
 export const Calcas = () => {
 
@@ -14,7 +14,7 @@ export const Calcas = () => {
 
   return (
     <div className="flex container">
-      <Aside />
+      <CalcaFilter />
 
       <section className={styles.calcas}>
         {

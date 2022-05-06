@@ -3,8 +3,8 @@ import styles from '../../styles/main.module.scss'
 export const Main = () => {
   return (
 
-    <main className={`${styles.main} container`}>
-      <section></section>
+    <main role="main" className={`${styles.main} container`}>
+      <section aria-label='Conteúdo bem branco'></section>
 
       <h1>Seja bem vindo</h1>
 

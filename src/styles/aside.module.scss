@@ -1,9 +1,9 @@
+// Seção de estilos do aside na página inical e contatos
 .aside {
   height: 507px;
   width: 261.22px;
 
   background-color: #E2DEDC;
-
   padding: 16px 48px;
 
   ul li {
@@ -21,9 +21,163 @@
     color: #000;
     text-decoration: none;
 
-
     &:hover {
       text-decoration: underline;
     }
   }
+}
+
+// Seção de estilos do aside na página camisetas
+.aside-camisetas-filter {
+  height: 507px;
+  width: 261.22px;
+
+  background-color: #E2DEDC;
+
+  padding: 16px 48px;
+
+  h2 {
+    color: #ED1A39;
+    font-weight: 800;
+
+    margin-bottom: 36px;
+  }
+
+  h3 {
+    color: #1E2B50
+  }
+
+  div.colors {
+    display: flex;
+
+    margin-top: 16px;
+
+    button {
+      width: 4px;
+      margin-left: 8px;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        border: 2px solid rgb(36, 36, 36);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    button.red {
+      width: 48px;
+      height: 24px;
+
+      background-color: #CB0D1F;
+      border-radius: 2px;
+    }
+
+    button.orange {
+      width: 48px;
+      height: 24px;
+
+      background-color: #F26324;
+      border-radius: 2px;
+    }
+
+    button.blue {
+      width: 48px;
+      height: 24px;
+
+      background-color: #27A3A9;
+      border-radius: 2px;
+    }
+
+    button.pink {
+      width: 48px;
+      height: 24px;
+
+      background-color: pink;
+      border-radius: 2px;
+    }
+  }
+
+
+
+  div:last-child {
+
+    h3 {
+      margin: 32px 0 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #626262;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 16px;
+  }
+}
+
+.aside-calcas-filter {
+
+  height: 507px;
+  width: 261.22px;
+
+  background-color: #E2DEDC;
+  padding: 16px 48px;
+
+
+  h2 {
+    color: #CB0D1F;
+  }
+
+  h3 {
+    margin-top: 32px;
+    color: #1E2B50;
+    margin-bottom: 8px;
+  }
+
+  div.male {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  div.female {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-content: space-around;
+
+    label {
+      margin-right: 6px;
+    }
+
+  }
+
+  div:last-child {
+
+    h3 {
+      margin: 32px 0 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #626262;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 16px;
+  }
+
 }

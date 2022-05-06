@@ -6,15 +6,12 @@ import styles from '../../styles/aside.module.scss'
 
 const Aside = () => {
 
-  const { categoriesList, pathname } = useContext(CategoryApiContext)
-
-  const isCamisetas = useMemo(() => pathname === "/camisetas", [pathname]) 
+  const { categoriesList } = useContext(CategoryApiContext)
 
   return (
-    
-    <aside className={`${styles.aside} container`}>
+
+    <aside role="aside" className={`${styles.aside} container`}>
       <nav>
-      {isCamisetas && (<div>to na rota camisetas</div>)}
         <ul>
           <li>
             <Link to="/home">Página inicial</Link>

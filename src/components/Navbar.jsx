@@ -15,17 +15,17 @@ export const Navbar = () => {
       <nav className='containerMenu'>
         <ul>
           <li>
-            <Link to="/home">Página inicial</Link>
+            <Link to={'/home'} title="Página inicial">Página inicial</Link>
           </li>
           {categoriesList &&
             categoriesList.map(category => (
               <li key={category.id}>
-                <Link to={category.path}>{category.name}</Link>
+                <Link to={category.path} title={category.path}>{category.name}</Link>
               </li>
             ))
           }
           <li>
-            <Link to="/contato">Contato</Link>
+            <Link to="/contato" title='Contato'>Contato</Link>
           </li>
         </ul>
       </nav>
