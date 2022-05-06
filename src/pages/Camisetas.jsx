@@ -20,7 +20,7 @@ export const Camisetas = () => {
         {!camisasFiltradas.length ?
           items.map(camiseta => (
             <div key={camiseta.id}>
-              <img src={`../media/${camiseta.image}`} alt="Imagem da camiseta" />
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
               <span>{camiseta.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
@@ -34,7 +34,65 @@ export const Camisetas = () => {
           :
           camisasFiltradas.map(camiseta => (
             <div key={camiseta.id}>
-              <img src={tshirtImg} alt="Imagem da camiseta" />
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
+              <span id="comprar-item">{camiseta.name}</span>
+              <span id="comprar-item" className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(camiseta.price)}
+              </span>
+              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+            </div>
+          ))
+        }
+        {!camisasFiltradas.length ?
+          items.map(camiseta => (
+            <div key={camiseta.id}>
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
+              <span>{camiseta.name}</span>
+              <span className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(camiseta.price)}
+              </span>
+              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+            </div>
+          ))
+          :
+          camisasFiltradas.map(camiseta => (
+            <div key={camiseta.id}>
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
+              <span id="comprar-item">{camiseta.name}</span>
+              <span id="comprar-item" className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(camiseta.price)}
+              </span>
+              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+            </div>
+          ))
+        }
+        {!camisasFiltradas.length ?
+          items.map(camiseta => (
+            <div key={camiseta.id}>
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
+              <span>{camiseta.name}</span>
+              <span className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(camiseta.price)}
+              </span>
+              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+            </div>
+          ))
+          :
+          camisasFiltradas.map(camiseta => (
+            <div key={camiseta.id}>
+              <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
               <span id="comprar-item">{camiseta.name}</span>
               <span id="comprar-item" className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
