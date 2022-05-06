@@ -8,7 +8,7 @@ export const CategoryApiContextProvider = ({ children }) => {
 
   const [categoriesList, setCategoriesList] = useState([])
   const [items, setItems] = useState([])
-  const [camisasFiltradas, setCamisasFiltradas] = useState([])
+  const [itemsFiltereds, setCamisasFiltradas] = useState([])
   const [loading, setLoading] = useState(true)
 
 
@@ -31,7 +31,7 @@ export const CategoryApiContextProvider = ({ children }) => {
 
     const itemsFiltered = items.filter((item) => item.filter[0].color === filter)
     setCamisasFiltradas(itemsFiltered)
-    console.log(camisasFiltradas)
+    console.log(itemsFiltereds)
     setLoading(false)
   }
 
@@ -40,7 +40,7 @@ export const CategoryApiContextProvider = ({ children }) => {
   }
  
   return (
-    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, camisasFiltradas }}>
+    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds }}>
       {children}
     </CategoryApiContext.Provider>
   );

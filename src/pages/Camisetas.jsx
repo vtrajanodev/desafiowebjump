@@ -6,7 +6,7 @@ import { CamisetaFilter } from "../components/Filters/CamisetaFilter"
 
 export const Camisetas = () => {
 
-  const { items, getItems, camisasFiltradas } = useContext(CategoryApiContext)
+  const { items, getItems, itemsFiltereds } = useContext(CategoryApiContext)
 
   useEffect(() => {
     getItems(1)
@@ -17,7 +17,7 @@ export const Camisetas = () => {
       <CamisetaFilter />
 
       <section className={styles.camisetas}>
-        {!camisasFiltradas.length ?
+        {!itemsFiltereds.length ?
           items.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
@@ -32,7 +32,7 @@ export const Camisetas = () => {
             </div>
           ))
           :
-          camisasFiltradas.map(camiseta => (
+          itemsFiltereds.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
               <span id="comprar-item">{camiseta.name}</span>
@@ -46,7 +46,7 @@ export const Camisetas = () => {
             </div>
           ))
         }
-        {!camisasFiltradas.length ?
+        {!itemsFiltereds.length ?
           items.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
@@ -61,7 +61,7 @@ export const Camisetas = () => {
             </div>
           ))
           :
-          camisasFiltradas.map(camiseta => (
+          itemsFiltereds.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
               <span id="comprar-item">{camiseta.name}</span>
@@ -75,7 +75,7 @@ export const Camisetas = () => {
             </div>
           ))
         }
-        {!camisasFiltradas.length ?
+        {!itemsFiltereds.length ?
           items.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
@@ -90,7 +90,7 @@ export const Camisetas = () => {
             </div>
           ))
           :
-          camisasFiltradas.map(camiseta => (
+          itemsFiltereds.map(camiseta => (
             <div key={camiseta.id}>
               <img src={`/src/assets/${camiseta.image}`} alt="Imagem da camiseta" />
               <span id="comprar-item">{camiseta.name}</span>

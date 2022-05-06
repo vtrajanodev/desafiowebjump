@@ -1,14 +1,12 @@
 import { useContext, useEffect } from "react"
-import Aside from "../components/MainContent/Aside"
 import { CategoryApiContext } from "../context/CategoryApi"
-import calcadosImg from '../assets/shoes-3.jpg'
 import styles from '../styles/calcados.module.scss'
 import { CalcadosFilter } from "../components/Filters/CalcadosFilter"
 
 
 export const Calcados = () => {
 
-  const { items, getItems } = useContext(CategoryApiContext)
+  const { items, getItems, itemsFiltereds } = useContext(CategoryApiContext)
 
   useEffect(() => {
     getItems(3)
@@ -20,18 +18,32 @@ export const Calcados = () => {
       <CalcadosFilter />
 
       <section className={styles.calcados}>
-        {
-          items.map(calcados => (
-            <div key={calcados.id}>
-              <img src={`/src/assets/${calcados.image}`} alt="Imagem da calcados" />
-              <span>{calcados.name}</span>
+      {!itemsFiltereds.length ?
+          items.map(calcado => (
+            <div key={calcado.id}>
+              <img src={`/src/assets/${calcado.image}`} alt="Imagem da calcado" />
+              <span>{calcado.name}</span>
               <span className={styles.currency}>
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL'
-                }).format(calcados.price)}
+                }).format(calcado.price)}
               </span>
-              <button>COMPRAR</button>
+              <button title="comprar" aria-label={` ${calcado.name} preço: ${calcado.price}`}>COMPRAR</button>
+            </div>
+          ))
+          :
+          itemsFiltereds.map(calcado => (
+            <div key={calcado.id}>
+              <img src={`/src/assets/${calcado.image}`} alt="Imagem da calcado" />
+              <span id="comprar-item">{calcado.name}</span>
+              <span id="comprar-item" className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(calcado.price)}
+              </span>
+              <button title="comprar" aria-label={` ${calcado.name} preço: ${calcado.price}`}>COMPRAR</button>
             </div>
           ))
         }
