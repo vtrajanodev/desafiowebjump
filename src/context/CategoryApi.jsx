@@ -9,6 +9,7 @@ export const CategoryApiContextProvider = ({ children }) => {
   const [categoriesList, setCategoriesList] = useState([])
   const [items, setItems] = useState([])
   const [itemsFiltereds, setCamisasFiltradas] = useState([])
+  const [pantsFiltered, setPantsFiltered] = useState([])
   const [loading, setLoading] = useState(true)
 
 
@@ -29,18 +30,31 @@ export const CategoryApiContextProvider = ({ children }) => {
 
   const getItemsFilters = (filter) => {
 
-    const itemsFiltered = items.filter((item) => item.filter[0].color === filter)
+    const itemsFiltered = items.filter(item => item.filter[0].color === filter)
     setCamisasFiltradas(itemsFiltered)
     console.log(itemsFiltereds)
     setLoading(false)
   }
 
-  if(loading) {
+  const getPantsFilters = (gender) => {
+    if(gender === 'Masculina') {
+      const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
+      setPantsFiltered(pantsFiltered)
+      console.log(pantsFiltered)
+    }
+    else if (gender === 'Feminina') {
+      const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
+      setPantsFiltered(pantsFiltered)
+      console.log(pantsFiltered)      
+    }
+  }
+
+  if (loading) {
     return <Loading />
   }
- 
+
   return (
-    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds }}>
+    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds, pantsFiltered, getPantsFilters }}>
       {children}
     </CategoryApiContext.Provider>
   );

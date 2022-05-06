@@ -5,7 +5,7 @@ import styles from '../../styles/aside.module.scss'
 
 export const CalcaFilter = () => {
 
-  
+  const { getPantsFilters } = useContext(CategoryApiContext)
 
   return (
     <>
@@ -17,12 +17,12 @@ export const CalcaFilter = () => {
 
           <div className={styles.male}>
             <label htmlFor="male">Masculino</label>
-            <input id='male' type="checkbox" />
+            <input name='checkGender' onClick={() => getPantsFilters('Masculina')} id='male' type="radio" />
           </div>
 
-          <div  className={styles.female}>
+          <div className={styles.female}>
             <label htmlFor="female">Feminino</label>
-            <input id='female' type="checkbox" />
+            <input name='checkGender' onClick={() => getPantsFilters('Feminina')} id='female'  type="radio" />
           </div>
 
           <div>

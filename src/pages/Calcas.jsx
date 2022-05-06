@@ -5,7 +5,7 @@ import { CalcaFilter } from '../components/Filters/CalcaFilter'
 
 export const Calcas = () => {
 
-  const { items, getItems } = useContext(CategoryApiContext)
+  const { items, getItems, pantsFiltered } = useContext(CategoryApiContext)
 
   useEffect(() => {
     getItems(2)
@@ -16,7 +16,7 @@ export const Calcas = () => {
       <CalcaFilter />
 
       <section className={styles.calcas}>
-        {
+        {!pantsFiltered.length ?
           items.map(calca => (
             <div key={calca.id}>
               <img src={`/src/assets/${calca.image}`} alt="Imagem da calca" />
@@ -30,8 +30,23 @@ export const Calcas = () => {
               <button>COMPRAR</button>
             </div>
           ))
+          :
+          pantsFiltered.map(calca => (
+            <div key={calca.id}>
+              <img src={`/src/assets/${calca.image}`} alt="Imagem da calca" />
+              <span>{calca.name}</span>
+              <span className={styles.currency}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(calca.price)}
+              </span>
+              <button>COMPRAR</button>
+            </div>
+          ))
+
         }
-   
+
       </section>
     </div>
   )
