@@ -10,6 +10,7 @@ export const CategoryApiContextProvider = ({ children }) => {
   const [items, setItems] = useState([])
   const [itemsFiltereds, setCamisasFiltradas] = useState([])
   const [pantsFiltered, setPantsFiltered] = useState([])
+  const [shoesFiltereds, setShoesFiltereds] = useState([])
   const [loading, setLoading] = useState(true)
 
 
@@ -29,15 +30,21 @@ export const CategoryApiContextProvider = ({ children }) => {
   }
 
   const getItemsFilters = (filter) => {
-
     const itemsFiltered = items.filter(item => item.filter[0].color === filter)
     setCamisasFiltradas(itemsFiltered)
     console.log(itemsFiltereds)
     setLoading(false)
   }
 
+  const getShoesFilters = (filter) => {
+    const shoesFiltered = items.filter(item => item.filter[0].color === filter)
+    setShoesFiltereds(shoesFiltered)
+    console.log(shoesFiltered)
+    setLoading(false)
+  }
+
   const getPantsFilters = (gender) => {
-    if(gender === 'Masculina') {
+    if (gender === 'Masculina') {
       const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
       setPantsFiltered(pantsFiltered)
       console.log(pantsFiltered)
@@ -45,7 +52,7 @@ export const CategoryApiContextProvider = ({ children }) => {
     else if (gender === 'Feminina') {
       const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
       setPantsFiltered(pantsFiltered)
-      console.log(pantsFiltered)      
+      console.log(pantsFiltered)
     }
   }
 
@@ -54,7 +61,7 @@ export const CategoryApiContextProvider = ({ children }) => {
   }
 
   return (
-    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds, pantsFiltered, getPantsFilters }}>
+    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds, pantsFiltered, getPantsFilters, getShoesFilters, shoesFiltereds }}>
       {children}
     </CategoryApiContext.Provider>
   );

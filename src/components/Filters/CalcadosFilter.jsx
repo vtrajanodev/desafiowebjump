@@ -5,7 +5,7 @@ import styles from '../../styles/aside.module.scss'
 
 export const CalcadosFilter = () => {
 
-  const { getItemsFilters } = useContext(CategoryApiContext)
+  const { getShoesFilters } = useContext(CategoryApiContext)
 
   return (
     <>
@@ -15,10 +15,10 @@ export const CalcadosFilter = () => {
         <h3>Cores</h3>
 
         <div className={styles.colors}>
-          <button onClick={() => getItemsFilters("Preta")} className={styles.black}></button>
-          <button onClick={() => getItemsFilters("Laranja")} className={styles.orange}></button>
-          <button onClick={() => getItemsFilters("Cinza")} className={styles.gray}></button>
-          <button onClick={() => getItemsFilters("Rosa")} className={styles.pink}></button>
+          <button onClick={() => getShoesFilters("Preta")} className={styles.black}></button>
+          <button onClick={() => getShoesFilters("Azul")} className={styles.blue}></button>
+          <button onClick={() => getShoesFilters("Cinza")} className={styles.gray}></button>
+          <button onClick={() => getShoesFilters("Rosa")} className={styles.pink}></button>
         </div>
 
         <div>

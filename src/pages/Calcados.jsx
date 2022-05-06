@@ -6,7 +6,7 @@ import { CalcadosFilter } from "../components/Filters/CalcadosFilter"
 
 export const Calcados = () => {
 
-  const { items, getItems, itemsFiltereds } = useContext(CategoryApiContext)
+  const { items, getItems, shoesFiltereds } = useContext(CategoryApiContext)
 
   useEffect(() => {
     getItems(3)
@@ -18,7 +18,7 @@ export const Calcados = () => {
       <CalcadosFilter />
 
       <section className={styles.calcados}>
-      {!itemsFiltereds.length ?
+        {!shoesFiltereds.length ?
           items.map(calcado => (
             <div key={calcado.id}>
               <img src={`/src/assets/${calcado.image}`} alt="Imagem da calcado" />
@@ -33,7 +33,7 @@ export const Calcados = () => {
             </div>
           ))
           :
-          itemsFiltereds.map(calcado => (
+          shoesFiltereds.map(calcado => (
             <div key={calcado.id}>
               <img src={`/src/assets/${calcado.image}`} alt="Imagem da calcado" />
               <span id="comprar-item">{calcado.name}</span>
