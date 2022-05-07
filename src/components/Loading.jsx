@@ -1,7 +1,12 @@
-import React from 'react'
+import { CircleNotch } from 'phosphor-react'
+import styles from '../styles/loading.module.scss'
 
 export const Loading = () => {
   return (
-    <h1>Loading...</h1>
+    <div className={styles.loading}>
+      <div>
+        <CircleNotch weight='bold'/>
+      </div>
+    </div>
   )
 }

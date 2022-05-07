@@ -1,6 +1,6 @@
-import { X } from 'phosphor-react';
 import { useContext, useState } from 'react'
 import { CategoryApiContext } from '../../context/CategoryApi';
+import { X } from 'phosphor-react';
 import styles from '../../styles/aside.module.scss'
 
 

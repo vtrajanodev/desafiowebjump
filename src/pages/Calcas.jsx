@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { CategoryApiContext } from '../context/CategoryApi'
-import styles from '../styles/calcas.module.scss'
 import { CalcaFilter } from '../components/Filters/CalcaFilter'
+import styles from '../styles/calcas.module.scss'
 
 export const Calcas = () => {
 

@@ -1,8 +1,7 @@
 import { useContext, useEffect } from "react"
 import { CategoryApiContext } from "../context/CategoryApi"
-import styles from '../styles/camisetas.module.scss'
-import tshirtImg from '../assets/shirt-1.jpg'
 import { CamisetaFilter } from "../components/Filters/CamisetaFilter"
+import styles from '../styles/camisetas.module.scss'
 
 export const Camisetas = () => {
 

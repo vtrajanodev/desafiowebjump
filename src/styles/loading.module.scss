@@ -1,0 +1,59 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    font-size: 60px;
+    animation: loading 4s linear infinite;
+  }
+
+
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(999deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(999deg);
+  }
+}
+
+@-moz-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(999deg);
+  }
+}
+
+@-ms-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(999deg);
+  }
+}
+
