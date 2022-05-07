@@ -95,6 +95,11 @@ Ferramentas utilizadas para desenvolvimento do projeto.
 
 * Separação de arquivos de componentes, páginas e estilos para fácil manuntenção do código.
 
+
+* Utilização de @keyframes para animação no SCSS em utilização no componente de loading.
+
+* Utilização de media queries para responsividade no SCSS.
+
 * Responsividade absoluta nos breakpoints (quase todos) solicitados: 1440px, 1024px, 768px. Infelizmente faltou a versão mobile no breakpoint 320px o qual apenas o tempo não permitiu a finalização. 
 
 ## 🎁 Expressão de gratidão
