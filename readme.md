@@ -9,8 +9,12 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ```
 Clonando o projeto do github:
 
-rode o seguinte comando no seu terminal no diretório onde você deseja realizar um clone do projeto.
+Para baixar o projeto e funcionar de forma correta, é necessário que faça o clone primeiramente da API fornecida pela WEBJUMP para consumo do fornecimento das categorias e produtos utilizadas no desenvolvimento. Posteriormente realize o clone do projeto front end desenvolvido para fins de teste. Para clonar os projetos execute os seguintes comandos 
 
+Api fornecida:
+git clone https://bitbucket.org/webjump/assessment-frontend.git
+
+Projeto frontend:
 git clone https://github.com/vtrajanodev/desafiowebjump.git
 
 ```
@@ -21,87 +25,84 @@ git clone https://github.com/vtrajanodev/desafiowebjump.git
 De que coisas você precisa para instalar o software e como instalá-lo?
 
 ```
-Dar exemplos
+ * Node instalado em sua máquina
+ * NPM ou Yarn para gerenciamento.
+
 ```
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+Para que o projeto funcione da forma
 
 ```
-Dar exemplos
+Para instalar e rodar o projeto é necessário que primeiro seja executado o servidor local onde estará hospedado a API fornecida pela WEBJUMP, para isso, execute o seguinte comando
+
+* Usando NPM:
+
+npm install
+npm start
+
+*Usando yarn
+
+yarn
+yarn start
+
+
+Após a API estar hospedada e rodando no seu servidor local, é necessário que seja inicializado o projeto frontend, para isso execute o seguinte comando:
+
+* Usando NPM:
+
+npm install
+npm dev
+
+*Usando yarn
+
+yarn
+yarn dev
 ```
-
-E repita:
-
-```
-Até finalizar
-```
-
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+Ferramentas utilizadas para desenvolvimento do projeto.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Vite] - ferramenta de construção do projeto frontend. Responsável pela criação das primeiras estruturas de pastas do projeto e build do mesmo.
+* [Yarn] - Utilizado para gerenciar dependências na instalação e execução de novos pacotes e execução do projeto como gerente de dependências
+* [react-router-dom] - Utilizado para gerenciar todo sistema de rotas do front end.
+* [SASS] - Pré processador utilizado para folha de estilos em cascata no CSS melhorando a performance da leitura dos estilos e possibilitando o uso de variáveis e funções.
+* [Axios] - Cliente HTTP baseado em Promises para fazer requisições a API fornecida.
+* [Phosphor] - Pacote disponibilizador de ícones integrado com react onde nos permite utilizar ícones pré-estabelecidos como componentes.
 
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+. 
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
+* **Um desenvolvedor** - *Trabalho Completo* - [vtrajanodev](https://github.com/linkParaPerfil)
 
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+## Details 🤓
 
-## 📄 Licença
+* Boas práticas de programação utilizando as melhores atualizações do react 2022 como utilização do Vite e react-router-dom na sua versão mais atual v6
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+* Acessibilidade total a todos os públicos. Todas as telas e funcionalidades do app são possíveis de serem utilizadas unicamente através do teclado bem como todos os itens das páginas são totalmente lidos pelo leitor de telas. (Leitor utilizado para testes: NVDA)
 
-## 🎁 Expressões de gratidão
+* Performance máxima do react atingida com react hooks, programação funcional
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
-* etc.
+* Utilização do context API mantendo as "regras de negócio" em um arquivo separado dos componentes apenas chamando os valores necessários, tirando a sobrecarga e perca de performance na ré-redenrização do componente.
+
+* Rotas protegidas de forma que o usuário não consegue cair em uma rota a partir do domínio utilizado e se deparar com um erro 404 - not found. Caso o usuário acesse uma rota não existente o mesmo é redirecionado para home automáticamente. 
+
+* Filtros e remoção de filtros funcionais
+
+* Utilização do pré-processador CSS "SASS" através de sua extensão SCSS.
+
+* Separação de arquivos de componentes, páginas e estilos para fácil manuntenção do código.
+
+* Responsividade absoluta nos breakpoints (quase todos) solicitados: 1440px, 1024px, 768px. Infelizmente faltou a versão mobile no breakpoint 320px o qual apenas o tempo não permitiu a finalização. 
+
+## 🎁 Expressão de gratidão
+
+* Agradecimentos aos gestores da WEBJUMP e em especial a Maíra a qual me fez o contato referente a vaga de frontend e fez o encaminhamento do teste me tirando todas as dúvidas de forma simples e objetiva. 
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+Desenvolvido com ❤️ por Victor Trajano

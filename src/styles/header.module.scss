@@ -3,6 +3,8 @@
   height: 30px;
   background-color: #000;
 
+  color: #fff;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;  
@@ -17,5 +19,6 @@
 
   nav ul li a {
     color: #fff;
+    margin: 0 8px;
   }
 }
