@@ -32,10 +32,8 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 
 ### 🔧 Instalação
 
-Para que o projeto funcione da forma
-
 ```
-Para instalar e rodar o projeto é necessário que primeiro seja executado o servidor local onde estará hospedado a API fornecida pela WEBJUMP, para isso, execute o seguinte comando
+Para instalar e rodar o projeto é necessário que primeiro seja executado o servidor local onde estará hospedado a API fornecida pela WEBJUMP, para isso, execute o seguinte comando:
 
 * Usando NPM:
 
@@ -77,21 +75,21 @@ Ferramentas utilizadas para desenvolvimento do projeto.
 ## ✒️ Autores
 
 
-* **Um desenvolvedor** - *Trabalho Completo* - [vtrajanodev](https://github.com/linkParaPerfil)
+* **Victor Trajano** - *Trabalho Completo* - [vtrajanodev](https://github.com/linkParaPerfil)
 
 ## Details 🤓
 
-* Boas práticas de programação utilizando as melhores atualizações do react 2022 como utilização do Vite e react-router-dom na sua versão mais atual v6
+* Boas práticas de programação utilizando as melhores atualizações do react 2022 como utilização do Vite e react-router-dom na sua versão mais atual v6.
 
-* Acessibilidade total a todos os públicos. Todas as telas e funcionalidades do app são possíveis de serem utilizadas unicamente através do teclado bem como todos os itens das páginas são totalmente lidos pelo leitor de telas. (Leitor utilizado para testes: NVDA)
+* Acessibilidade total a todos os públicos. Todas as telas e funcionalidades do app são possíveis de serem utilizadas unicamente através do teclado bem como todos os itens das páginas são totalmente lidos pelo leitor de telas. (Leitor utilizado para testes: NVDA).
 
-* Performance máxima do react atingida com react hooks, programação funcional
+* Performance máxima do react atingida com react hooks, programação funcional.
 
 * Utilização do context API mantendo as "regras de negócio" em um arquivo separado dos componentes apenas chamando os valores necessários, tirando a sobrecarga e perca de performance na ré-redenrização do componente.
 
 * Rotas protegidas de forma que o usuário não consegue cair em uma rota a partir do domínio utilizado e se deparar com um erro 404 - not found. Caso o usuário acesse uma rota não existente o mesmo é redirecionado para home automáticamente. 
 
-* Filtros e remoção de filtros funcionais
+* Filtros e remoção de filtros funcionais.
 
 * Utilização do pré-processador CSS "SASS" através de sua extensão SCSS.
 

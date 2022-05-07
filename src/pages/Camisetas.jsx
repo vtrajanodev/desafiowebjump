@@ -27,7 +27,7 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
           :
@@ -41,7 +41,7 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
         }
@@ -56,7 +56,7 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
           :
@@ -70,7 +70,7 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
         }
@@ -85,7 +85,7 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
           :
@@ -99,11 +99,10 @@ export const Camisetas = () => {
                   currency: 'BRL'
                 }).format(camiseta.price)}
               </span>
-              <button title="comprar" aria-label={` ${camiseta.name} preço: ${camiseta.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${camiseta.name}. preço: ${camiseta.price}.`}>COMPRAR</button>
             </div>
           ))
         }
-
       </section>
     </div>
   )

@@ -29,7 +29,7 @@ export const Calcados = () => {
                   currency: 'BRL'
                 }).format(calcado.price)}
               </span>
-              <button title="comprar" aria-label={` ${calcado.name} preço: ${calcado.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${calcado.name}. preço: ${calcado.price}.`}>COMPRAR</button>
             </div>
           ))
           :
@@ -43,7 +43,7 @@ export const Calcados = () => {
                   currency: 'BRL'
                 }).format(calcado.price)}
               </span>
-              <button title="comprar" aria-label={` ${calcado.name} preço: ${calcado.price}`}>COMPRAR</button>
+              <button title="comprar" aria-label={` ${calcado.name}. preço: ${calcado.price}.`}>COMPRAR</button>
             </div>
           ))
         }
