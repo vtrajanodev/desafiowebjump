@@ -21,10 +21,10 @@ export const CalcadosFilter = () => {
         </div>
 
         <div className={styles.colors}>
-          <button onClick={() => getShoesFilters("Preta")} className={styles.black}></button>
-          <button onClick={() => getShoesFilters("Azul")} className={styles.blue}></button>
-          <button onClick={() => getShoesFilters("Cinza")} className={styles.gray}></button>
-          <button onClick={() => getShoesFilters("Rosa")} className={styles.pink}></button>
+          <button aria-label='Filtro por cor preta' onClick={() => getShoesFilters("Preta")} className={styles.black}></button>
+          <button aria-label='Filtro por cor azul' onClick={() => getShoesFilters("Azul")} className={styles.blue}></button>
+          <button aria-label='Filtro por cor cinza' onClick={() => getShoesFilters("Cinza")} className={styles.gray}></button>
+          <button aria-label='Filtro por cor rosa' onClick={() => getShoesFilters("Rosa")} className={styles.pink}></button>
         </div>
 
         <div>
