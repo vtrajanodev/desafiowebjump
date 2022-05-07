@@ -1,3 +1,4 @@
+import { X } from 'phosphor-react'
 import { useContext } from 'react'
 import { CategoryApiContext } from '../../context/CategoryApi'
 import styles from '../../styles/aside.module.scss'
@@ -12,7 +13,12 @@ export const CalcadosFilter = () => {
       <aside className={styles['aside-camisetas-filter']}>
         <h2>FILTRE POR</h2>
 
-        <h3>Cores</h3>
+        <div className={styles['close-button']}>
+          <h3>Cores</h3>
+          <button aria-label='remover filtros'>
+            <X weight='bold' />
+          </button>
+        </div>
 
         <div className={styles.colors}>
           <button onClick={() => getShoesFilters("Preta")} className={styles.black}></button>

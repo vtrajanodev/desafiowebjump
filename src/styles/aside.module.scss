@@ -27,7 +27,7 @@
   }
 }
 
-// Seção de estilos do aside na página camisetas
+// Seção de estilos do aside na página camisetas e calçados que são iguais
 .aside-camisetas-filter {
   height: 507px;
   width: 261.22px;
@@ -35,6 +35,32 @@
   background-color: #E2DEDC;
 
   padding: 16px 48px;
+
+  div.close-button{
+    display: flex;
+    align-items: center;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.9);
+        border: 1px solid gray;
+      }
+
+      &:active {
+        color: #1E2B50;
+      }
+    }
+
+    h3 {
+      margin-right: 64px;
+    }
+  }
 
   h2 {
     color: #ED1A39;
@@ -49,8 +75,10 @@
 
   div.colors {
     display: flex;
+    // border: 1px solid red;
 
     margin-top: 16px;
+
 
     button {
       width: 4px;
@@ -139,6 +167,7 @@
   }
 }
 
+// seção de estilos do aside na página de calças
 .aside-calcas-filter {
 
   height: 507px;
@@ -146,6 +175,32 @@
 
   background-color: #E2DEDC;
   padding: 16px 48px;
+
+  div.close-button-calcas {
+    display: flex;
+    align-items: center;
+  
+    h3 {
+      margin-right: 64px;
+    }
+    button {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.9);
+        border: 1px solid gray;
+      }
+
+      &:active {
+        color: #1E2B50;
+      }
+    }
+  }
 
 
   h2 {
