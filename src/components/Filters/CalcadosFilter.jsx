@@ -6,7 +6,7 @@ import styles from '../../styles/aside.module.scss'
 
 export const CalcadosFilter = () => {
 
-  const { getShoesFilters } = useContext(CategoryApiContext)
+  const { getShoesFilters, setShoesFiltereds } = useContext(CategoryApiContext)
 
   return (
     <>
@@ -15,7 +15,7 @@ export const CalcadosFilter = () => {
 
         <div className={styles['close-button']}>
           <h3>Cores</h3>
-          <button aria-label='remover filtros'>
+          <button onClick={() => setShoesFiltereds([])} aria-label='remover filtros'>
             <X weight='bold' />
           </button>
         </div>

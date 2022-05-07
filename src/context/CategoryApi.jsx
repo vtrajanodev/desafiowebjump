@@ -61,7 +61,7 @@ export const CategoryApiContextProvider = ({ children }) => {
   }
 
   return (
-    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds, pantsFiltered, getPantsFilters, getShoesFilters, shoesFiltereds }}>
+    <CategoryApiContext.Provider value={{ categoriesList, items, getItems, getItemsFilters, itemsFiltereds, pantsFiltered, getPantsFilters, getShoesFilters, shoesFiltereds, setCamisasFiltradas, setPantsFiltered, setShoesFiltereds }}>
       {children}
     </CategoryApiContext.Provider>
   );

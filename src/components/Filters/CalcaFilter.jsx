@@ -6,7 +6,7 @@ import styles from '../../styles/aside.module.scss'
 
 export const CalcaFilter = () => {
 
-  const { getPantsFilters } = useContext(CategoryApiContext)
+  const { getPantsFilters, setPantsFiltered } = useContext(CategoryApiContext)
 
   return (
 
@@ -16,7 +16,7 @@ export const CalcaFilter = () => {
 
         <div className={styles['close-button-calcas']}>
           <h3>Gênero</h3>
-          <button aria-label='remover filtros'>
+          <button onClick={() => setPantsFiltered([])} aria-label='remover filtros'>
             <X weight='bold' />
           </button>
         </div>

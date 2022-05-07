@@ -7,7 +7,7 @@ import styles from '../../styles/aside.module.scss'
 
 export const CamisetaFilter = () => {
 
-  const { getItemsFilters } = useContext(CategoryApiContext)
+  const { getItemsFilters, setCamisasFiltradas } = useContext(CategoryApiContext)
 
   return (
     <>
@@ -17,7 +17,7 @@ export const CamisetaFilter = () => {
 
         <div className={styles['close-button']}>
           <h3>Cores</h3>
-          <button aria-label='remover filtros'>
+          <button onClick={() => setCamisasFiltradas([])} aria-label='remover filtros'>
             <X weight='bold' />
           </button>
         </div>
