@@ -6,3 +6,14 @@
   
   background-color: #CB0D1F;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    max-width: 100%;
+    height: 176px;
+  
+    margin: 16px auto;
+    
+    background-color: #CB0D1F;
+  }
+}

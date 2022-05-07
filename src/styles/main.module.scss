@@ -13,11 +13,55 @@
   section {
 
     text-align: justify;
-    
+
     &:first-child {
       background-color: #ACACAC;
       width: 954px;
       height: 281px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .main {
+    width: 760px;
+    margin: 0 auto;
+
+    h1 {
+      margin-left: 16px;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+
+      &:first-child {
+        background-color: #ACACAC;
+        max-width: 720px;
+        height: 281px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 0 auto;
+    padding: 0 8px;
+
+    section {
+      max-width: 500px;
+      margin: 0 auto;
+
+      &:first-child {
+        background-color: #ACACAC;
+        max-width: 520px;
+        height: 281px;
+        margin: 0 auto;
+
+      }
     }
   }
 }

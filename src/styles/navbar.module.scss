@@ -19,3 +19,11 @@
     text-decoration: none;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    ul li {
+      margin-right: 40px;
+    }
+  }
+}

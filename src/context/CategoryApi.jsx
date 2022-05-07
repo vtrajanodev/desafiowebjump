@@ -32,14 +32,12 @@ export const CategoryApiContextProvider = ({ children }) => {
   const getItemsFilters = (filter) => {
     const itemsFiltered = items.filter(item => item.filter[0].color === filter)
     setCamisasFiltradas(itemsFiltered)
-    console.log(itemsFiltereds)
     setLoading(false)
   }
 
   const getShoesFilters = (filter) => {
     const shoesFiltered = items.filter(item => item.filter[0].color === filter)
     setShoesFiltereds(shoesFiltered)
-    console.log(shoesFiltered)
     setLoading(false)
   }
 
@@ -47,12 +45,10 @@ export const CategoryApiContextProvider = ({ children }) => {
     if (gender === 'Masculina') {
       const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
       setPantsFiltered(pantsFiltered)
-      console.log(pantsFiltered)
     }
     else if (gender === 'Feminina') {
       const pantsFiltered = items.filter(pant => pant.filter[0].gender === gender)
       setPantsFiltered(pantsFiltered)
-      console.log(pantsFiltered)
     }
   }
 

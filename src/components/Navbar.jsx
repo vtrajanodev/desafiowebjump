@@ -8,8 +8,6 @@ export const Navbar = () => {
 
   const { categoriesList } = useContext(CategoryApiContext)
 
-  console.log(categoriesList)
-
   return (
     <div className={`${styles.navbar}`}>
       <nav className='containerMenu'>
